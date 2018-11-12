@@ -1,0 +1,8 @@
+name: Suite
+configFailurePolicy: skip
+tests:
+  - name: Test
+    classes:
+      - in.licious.test.ValidLoginTest
+      - in.licious.test.InvalidLogin
+
