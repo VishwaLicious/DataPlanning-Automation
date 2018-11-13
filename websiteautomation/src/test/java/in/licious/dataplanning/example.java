@@ -106,7 +106,7 @@ public class example {
                             //System.out.println(i);
                           
                             
-                          // Comparing the Mysql and Elastic Data
+                          // Comparing the Mysql and Elastic Data after changing the data types
                           System.out.println("Elastic="+i);
                           
                           if(resQuery.equalsIgnoreCase(str)) {
