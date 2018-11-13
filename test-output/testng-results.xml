@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2825" started-at="2018-10-27T09:42:40Z" finished-at="2018-10-27T09:42:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2825" started-at="2018-10-27T09:42:40Z" finished-at="2018-10-27T09:42:43Z">
+      <class name="dataplanning_api.UpdateActualsAndLossSaleToDemandPlanAPI">
+        <test-method status="PASS" signature="updateActualsAndLossSaleToDemandPlanTest()[pri:0, instance:dataplanning_api.UpdateActualsAndLossSaleToDemandPlanAPI@4eb7f003]" name="updateActualsAndLossSaleToDemandPlanTest" duration-ms="2788" started-at="2018-10-27T09:42:40Z" finished-at="2018-10-27T09:42:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateActualsAndLossSaleToDemandPlanTest -->
+      </class> <!-- dataplanning_api.UpdateActualsAndLossSaleToDemandPlanAPI -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
