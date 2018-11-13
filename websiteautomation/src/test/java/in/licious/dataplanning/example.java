@@ -24,7 +24,9 @@ public class example {
         ResultSet res1=null;
         String resQuery=null;
         String resQuery1=null;
-        String excelFilePath="C:\\Users\\vishwa\\Desktop\\Data Planning\\Data Set.xlsx";
+        //String excelFilePath="C:\\Users\\vishwa\\Desktop\\Data Planning\\Data Set.xlsx";
+        //Reading data 
+        String excelFilePath="/Users/Vishwa/git/DataPlanning-Automation/websiteautomation/ExcelData/Data Set.xlsx";
         JsonElement rootobj=null;
         
         ReadData rd=new ReadData();
@@ -89,10 +91,25 @@ public class example {
                            
                            
                             resQuery1 = rootobj.toString();
-                          System.out.println("Elastic="+rootobj);
+                            
+                            // Converting String to Double 
+                           // String text = "12.34"; // example String
+                            double value = Double.parseDouble(resQuery1);
+                            
+                            // Converting Double to Int
+                            
+                            Double d = new Double(value);
+                            int i = d.intValue();
+                            
+                            String str = Integer.toString(i);
+                            
+                            //System.out.println(i);
                           
+                            
+                          // Comparing the Mysql and Elastic Data
+                          System.out.println("Elastic="+i);
                           
-                          if(resQuery==resQuery1) {
+                          if(resQuery.equalsIgnoreCase(str)) {
                        	   
                        	   System.out.println("same");
                        	   
@@ -100,6 +117,25 @@ public class example {
                           }
                           else
                        	   System.out.println("Not same");
+                          
+                          
+                          
+                        //*************************************************************  
+                          
+//                          System.out.println("Elastic="+rootobj);
+//                          
+//                          if(resQuery==resQuery1) {
+//                       	   
+//                       	   System.out.println("same");
+//                       	   
+//                       	   
+//                          }
+//                          else
+//                       	   System.out.println("Not same");
+                          
+                        //***********************************************************
+                          
+                          
                            
                           
                            //res1.close();
