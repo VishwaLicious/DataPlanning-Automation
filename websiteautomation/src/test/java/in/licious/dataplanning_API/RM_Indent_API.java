@@ -9,18 +9,16 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 
-public class BriningApi {
+public class RM_Indent_API {
 	@Test
 	public void generatebriningPlanTest()
 	{
 	RequestSpecification request = RestAssured.given();
 		
 		JSONObject requestParams = new JSONObject();
-		requestParams.put("date", "2018-10-08"); 
-		requestParams.put("ck_id", "CK_001"); 
-		 
-		
-		
+		requestParams.put("from", "2018-10-08"); 
+		requestParams.put("to", "2018-10-14"); 
+		requestParams.put("city", "1"); 
 		// Add a header stating the Request body is a JSON
 		request.header("Content-Type", "application/json");
 		// Add a header stating the Request body is a JSON

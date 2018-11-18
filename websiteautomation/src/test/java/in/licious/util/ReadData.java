@@ -55,7 +55,37 @@ public class ReadData {
 		return value;
 	}
 	
-	
+public static String readDataFromExcel1(String excelFilePath,String excelSheetName,int rowNumber,int columnNumber,int columnNumber1){
+		
+		FileInputStream fis=null;
+		String value=null;
+		String value1=null;
+		String value2=null;
+		try {
+			fis = new FileInputStream(excelFilePath);
+			if(rowNumber>0){
+				//value=WorkbookFactory.create(fis).getSheet(excelSheetName).getRow(rowNumber).getCell(columnNumber).toString();
+				//The above of line code was converting yyyy-mm-dd to dd-mon-yyyy hence using below line of code
+				value1=WorkbookFactory.create(fis).getSheet(excelSheetName).getRow(rowNumber).getCell(columnNumber).getStringCellValue();
+				value2=WorkbookFactory.create(fis).getSheet(excelSheetName).getRow(rowNumber).getCell(columnNumber1).getStringCellValue();
+				value=value1+value2;
+			}
+			else{
+				throw new RuntimeException("rowNumber should be greater than one");
+		}
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch (EncryptedDocumentException e) {
+			e.printStackTrace();
+		} catch (InvalidFormatException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		value=value1+value2;
+		return value;
+	}
 	//to get to know the last row no
 	
 	public static int lastrownumber() throws EncryptedDocumentException, InvalidFormatException, IOException {

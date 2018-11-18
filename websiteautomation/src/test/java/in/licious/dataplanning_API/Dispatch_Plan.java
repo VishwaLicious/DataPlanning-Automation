@@ -9,18 +9,16 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 
-public class BriningApi {
+public class Dispatch_Plan {
 	@Test
 	public void generatebriningPlanTest()
 	{
 	RequestSpecification request = RestAssured.given();
 		
 		JSONObject requestParams = new JSONObject();
-		requestParams.put("date", "2018-10-08"); 
-		requestParams.put("ck_id", "CK_001"); 
-		 
-		
-		
+		requestParams.put("from", "2018-10-08"); 
+		requestParams.put("to", "2018-10-14"); 
+		requestParams.put("city", "1"); 
 		// Add a header stating the Request body is a JSON
 		request.header("Content-Type", "application/json");
 		// Add a header stating the Request body is a JSON
@@ -28,7 +26,7 @@ public class BriningApi {
 		
 		request.body(requestParams.toJSONString());
 		
-		Response response = request.post("http://planning-api.licious.in/procurement/services/rmproductionplan/generate");
+		Response response = request.post("http://13.126.207.17/production/services/brining/generate");
 
 		int statusCode = response.getStatusCode();
 		Assert.assertEquals(statusCode, 200);

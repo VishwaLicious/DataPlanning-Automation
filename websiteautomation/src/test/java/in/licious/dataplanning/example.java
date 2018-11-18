@@ -17,6 +17,7 @@ import in.licious.util.ReadData;
 
 public class example {
 	public static String data_DB() throws Throwable
+	
     {
         String productId=null;
         String hubId=null;
@@ -69,6 +70,11 @@ public class example {
                 			System.out.println("Mysql="+" "+resQuery);
         				}	
                 	
+                		// Converting 'resQuery' which is in String to Int
+                		
+                		int result = Integer.parseInt(resQuery);			
+                		System.out.println(result);
+
                 		
                 		
                 		
@@ -100,7 +106,7 @@ public class example {
                             
                             Double d = new Double(value);
                             int i = d.intValue();
-                            
+                            		
                             String str = Integer.toString(i);
                             
                             //System.out.println(i);
@@ -117,6 +123,13 @@ public class example {
                           }
                           else
                        	   System.out.println("Not same");
+                          
+                          	
+                         
+                          
+                          //Finding the difference of two integers
+                          
+                     
                           
                           
                           
