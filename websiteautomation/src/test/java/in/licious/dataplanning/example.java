@@ -48,7 +48,7 @@ public class example {
                 //System.out.println(productCount);
                            
                 //System.out.println(DB_data);
-                for(int date1=1;date1<=30;date1++) {
+                for(int date1=1;date1<=21;date1++) {
                 	date=rd.readDataFromExcel(excelFilePath, "Sheet1", date1, 4);
                 	System.out.println(date);
                    
@@ -73,7 +73,7 @@ public class example {
                 		// Converting 'resQuery' which is in String to Int
                 		
                 		int result = Integer.parseInt(resQuery);			
-                		System.out.println(result);
+                		//System.out.println(result);
 
                 		
                 		
@@ -89,13 +89,13 @@ public class example {
                           request.connect();
 
                           // Convert to a JSON object to print data
-                          JsonParser jp = new JsonParser(); //from gson
+                          JsonParser jp = new JsonParser(); //from Json
                           JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); //Convert the input stream to a json element
                            rootobj = root.getAsJsonObject().get("aggregations").getAsJsonObject().get("SUM(order_item_quantity)").getAsJsonObject().get("value"); //May be an array, may be an object.
                           
                        //   Object s1=rootobj;
                            
-                           
+                           //Converting the rootobj which is in the Json to String
                             resQuery1 = rootobj.toString();
                             
                             // Converting String to Double 
@@ -106,7 +106,8 @@ public class example {
                             
                             Double d = new Double(value);
                             int i = d.intValue();
-                            		
+                            
+                            //Converting String to Int
                             String str = Integer.toString(i);
                             
                             //System.out.println(i);
@@ -114,8 +115,14 @@ public class example {
                             
                           // Comparing the Mysql and Elastic Data after changing the data types
                           System.out.println("Elastic="+i);
+                         
+                          // Comparing two strings Mysql=resQuery and Elastic=str 
+                         // if(resQuery.equalsIgnoreCase(str)) {
+                         // Comparing two ints Mysql=result and Elastic=i
+                         //if(result==i) {
                           
-                          if(resQuery.equalsIgnoreCase(str)) {
+                          //Comparing Mysql and Elastic data
+                          if(resQuery.equals(str)) {
                        	   
                        	   System.out.println("same");
                        	   
@@ -125,6 +132,9 @@ public class example {
                        	   System.out.println("Not same");
                           
                           	
+                         System.out.println();
+                         System.out.println();
+                         
                          
                           
                           //Finding the difference of two integers
@@ -173,7 +183,8 @@ public static void main(String args[]) throws Throwable {
     System.out.println(date.toString());
     
     
-	System.out.println("MAin Execution");
+	System.out.println("Main Execution");
+	System.out.println();
 	 data_DB();
 	
 	 System.out.println("************************************************");
