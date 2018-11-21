@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="in.licious.dataplanning_API.RM_Required_Production">
+      <class name="in.licious.dataplanning_API.RM_Required_Production3">
         <methods>
           <include name="generateRM_Required_Production"/>
         </methods>
-      </class> <!-- in.licious.dataplanning_API.RM_Required_Production -->
+      </class> <!-- in.licious.dataplanning_API.RM_Required_Production3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

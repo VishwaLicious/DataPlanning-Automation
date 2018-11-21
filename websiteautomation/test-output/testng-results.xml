@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4271" started-at="2018-11-16T13:26:18Z" finished-at="2018-11-16T13:26:22Z">
+  <suite name="Default suite" duration-ms="6926" started-at="2018-11-21T03:34:44Z" finished-at="2018-11-21T03:34:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4271" started-at="2018-11-16T13:26:18Z" finished-at="2018-11-16T13:26:22Z">
-      <class name="in.licious.dataplanning_API.DemandPlanAPI">
-        <test-method status="PASS" signature="createDemandPlan()[pri:0, instance:in.licious.dataplanning_API.DemandPlanAPI@26653222]" name="createDemandPlan" duration-ms="4248" started-at="2018-11-16T18:56:18Z" finished-at="2018-11-16T18:56:22Z">
+    <test name="Default test" duration-ms="6926" started-at="2018-11-21T03:34:44Z" finished-at="2018-11-21T03:34:51Z">
+      <class name="in.licious.dataplanning_API.RM_Required_Production3">
+        <test-method status="PASS" signature="generateRM_Required_Production()[pri:0, instance:in.licious.dataplanning_API.RM_Required_Production3@3e6fa38a]" name="generateRM_Required_Production" duration-ms="6903" started-at="2018-11-21T09:04:44Z" finished-at="2018-11-21T09:04:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createDemandPlan -->
-      </class> <!-- in.licious.dataplanning_API.DemandPlanAPI -->
+        </test-method> <!-- generateRM_Required_Production -->
+      </class> <!-- in.licious.dataplanning_API.RM_Required_Production3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
