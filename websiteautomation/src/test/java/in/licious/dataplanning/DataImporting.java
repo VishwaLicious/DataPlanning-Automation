@@ -15,7 +15,7 @@ import com.google.gson.JsonParser;
 
 import in.licious.util.ReadData;
 
-public class example {
+public class DataImporting {
 	public static String data_DB() throws Throwable
 	
     {
