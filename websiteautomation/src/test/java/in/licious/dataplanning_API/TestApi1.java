@@ -1,6 +1,10 @@
 package in.licious.dataplanning_API;
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
@@ -52,6 +56,7 @@ public class TestApi1 {
 		System.out.println(data1.asString());
 	}
 	//@Test
+	@Test
 	public  void test() {
 		RestAssured.baseURI="https://planning-api.licious.in/forecast/services/systemforecast";
 		RequestSpecification request = RestAssured.given();
@@ -97,7 +102,7 @@ public class TestApi1 {
 		Response response = request.post("https://planning-api.licious.in/production/services/systemdp/create");
 
 		int statusCode = response.getStatusCode();
-		Assert.assertEquals(statusCode, 200);
+		AssertJUnit.assertEquals(statusCode, 200);
 		String data = response.getContentType();
 		ResponseBody data1 = response.getBody();
 
@@ -126,7 +131,7 @@ public void test2()
 	Response response = request.post("http://13.126.207.17/forecast/services/systemforecast/day");
 
 	int statusCode = response.getStatusCode();
-	Assert.assertEquals(statusCode, 200);
+	AssertJUnit.assertEquals(statusCode, 200);
 	String data = response.getContentType();
 	ResponseBody data1 = response.getBody();
 
@@ -156,7 +161,7 @@ public void test3()
 	Response response = request.post("http://13.126.207.17/forecast/dashboard/wastage");
 
 	int statusCode = response.getStatusCode();
-	Assert.assertEquals(statusCode, 200);
+	AssertJUnit.assertEquals(statusCode, 200);
 	String data = response.getContentType();
 	ResponseBody data1 = response.getBody();
 
@@ -185,7 +190,7 @@ RequestSpecification request = RestAssured.given();
 	Response response = request.post("http://13.126.207.17/forecast/dashboard/wastage");
 
 	int statusCode = response.getStatusCode();
-	Assert.assertEquals(statusCode, 200);
+	AssertJUnit.assertEquals(statusCode, 200);
 	String data = response.getContentType();
 	ResponseBody data1 = response.getBody();
 
@@ -211,7 +216,7 @@ RequestSpecification request = RestAssured.given();
 	Response response = request.post("http://13.126.207.17/forecast/services/updateActualsAndLossSaleToDemandPlan");
 
 	int statusCode = response.getStatusCode();
-	Assert.assertEquals(statusCode, 200);
+	AssertJUnit.assertEquals(statusCode, 200);
 	String data = response.getContentType();
 	ResponseBody data1 = response.getBody();
 
@@ -238,7 +243,7 @@ RequestSpecification request = RestAssured.given();
 	Response response = request.post("http://13.126.207.17/production/services/brining/generate");
 
 	int statusCode = response.getStatusCode();
-	Assert.assertEquals(statusCode, 200);
+	AssertJUnit.assertEquals(statusCode, 200);
 	String data = response.getContentType();
 	ResponseBody data1 = response.getBody();
 
@@ -265,7 +270,7 @@ RequestSpecification request = RestAssured.given();
 	Response response = request.post("http://13.126.207.17/production/services/thawing/generate");
 
 	int statusCode = response.getStatusCode();
-	Assert.assertEquals(statusCode, 200);
+	AssertJUnit.assertEquals(statusCode, 200);
 	String data = response.getContentType();
 	ResponseBody data1 = response.getBody();
 
@@ -292,7 +297,7 @@ RequestSpecification request = RestAssured.given();
 	Response response = request.post("http://13.126.207.17/production/services/generate");
 
 	int statusCode = response.getStatusCode();
-	Assert.assertEquals(statusCode, 200);
+	AssertJUnit.assertEquals(statusCode, 200);
 	String data = response.getContentType();
 	ResponseBody data1 = response.getBody();
 

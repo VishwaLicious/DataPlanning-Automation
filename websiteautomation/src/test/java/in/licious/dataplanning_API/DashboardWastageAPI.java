@@ -1,5 +1,9 @@
 package in.licious.dataplanning_API;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.json.JSONException;
@@ -36,7 +40,7 @@ public class DashboardWastageAPI extends ElasticSearch{
 		Response response = request.post("http://13.126.207.17/forecast/dashboard/wastage");
 
 		int statusCode = response.getStatusCode();
-		Assert.assertEquals(statusCode, 200);
+		AssertJUnit.assertEquals(statusCode, 200);
 		String data = response.getContentType();
 		ResponseBody data1 = response.getBody();
 

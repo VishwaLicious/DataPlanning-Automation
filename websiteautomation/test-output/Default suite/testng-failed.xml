@@ -3,11 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="in.licious.dataplanning_API.RM_Required_Production3">
+      <class name="in.licious.test.Chicken">
         <methods>
-          <include name="generateRM_Required_Production"/>
+          <include name="closeFramework"/>
+          <include name="tearDown"/>
+          <include name="initFramework"/>
+          <include name="setUp"/>
+          <include name="testChicken"/>
+          <include name="initGlobalConstants"/>
         </methods>
-      </class> <!-- in.licious.dataplanning_API.RM_Required_Production3 -->
+      </class> <!-- in.licious.test.Chicken -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

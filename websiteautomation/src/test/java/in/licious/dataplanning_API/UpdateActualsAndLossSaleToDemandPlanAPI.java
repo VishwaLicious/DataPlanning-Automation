@@ -1,5 +1,9 @@
 package in.licious.dataplanning_API;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -37,7 +41,7 @@ public class UpdateActualsAndLossSaleToDemandPlanAPI {
 		Response response = request.post("http://13.126.207.17/forecast/services/updateActualsAndLossSaleToDemandPlan");
 
 		int statusCode = response.getStatusCode();
-		Assert.assertEquals(statusCode, 200);
+		AssertJUnit.assertEquals(statusCode, 200);
 		String data = response.getContentType();
 		ResponseBody data1 = response.getBody();
 

@@ -1,5 +1,9 @@
 package in.licious.dataplanning_API;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -30,7 +34,7 @@ public class CreateSystemDPAPI {
 		Response response = request.post("https://planning-api.licious.in/production/services/systemdp/create");
 
 		int statusCode = response.getStatusCode();
-		Assert.assertEquals(statusCode, 200);
+		AssertJUnit.assertEquals(statusCode, 200);
 		String data = response.getContentType();
 		ResponseBody data1 = response.getBody();
 

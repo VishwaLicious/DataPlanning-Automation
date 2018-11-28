@@ -6769,3 +6769,8 @@
 2018-08-17 11:35:02,551 - [in.licious.test.FishandSeafoodNetBanking] - INFO - 5 
 2018-08-17 11:35:32,630 - [in.licious.test.FishandSeafoodNetBanking] - INFO - chrome is launched 
 2018-08-17 11:36:33,676 - [in.licious.test.FishandSeafoodNetBanking] - INFO - chrome is closed 
+2018-11-29 01:26:14,547 - [in.licious.test.Chicken] - INFO - framework is initialised 
+2018-11-29 01:35:34,933 - [in.licious.test.Chicken] - INFO - framework is initialised 
+2018-11-29 01:39:41,963 - [in.licious.test.Chicken] - INFO - framework is initialised 
+2018-11-29 01:49:04,035 - [in.licious.test.Chicken] - INFO - framework is initialised 
+2018-11-29 02:19:05,663 - [in.licious.test.Chicken] - INFO - framework is initialised 

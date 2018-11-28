@@ -81,10 +81,37 @@ public class MorningDispatch {
 					String csDate = rd.readDataFromExcel(excelfilepath, "Sheet1", i2, 5);
 					
 					
+					// First Querying for the Max Version and passing the max version in Demand Plan Query 
+					
+					String sURL2 = "https://plan-es1.licious.app/_sql?sql="+URLEncoder.encode("select max(version) from demand-plan where product_id='"+pr_id+"' and date='"+date+"'and cluster_id='"+c_id+"'");
+					
+					
+					
+					// Connect to the URL using java's native library
+			          URL url2 = new URL(sURL2);
+			          URLConnection request3 = url2.openConnection();
+			        // request3.connect();
+			          
+			          JsonParser jp = new JsonParser();
+			          
+			          // Convert to a JSON object to print data
+			          JsonParser jp2 = new JsonParser(); //from Json
+			          JsonElement root2 = jp.parse(new InputStreamReader((InputStream) request3.getContent())); //Convert the input stream to a json element
+			          JsonElement rootobj2 = root2.getAsJsonObject().get("aggregations").getAsJsonObject().get("MAX(version)").getAsJsonObject().get("value"); //May be an array, may be an object.     
+			          
+			          System.out.println("");
+			          
+			          System.out.println("Max version of Demand_Plan" + " " + rootobj2);
+			         
+					
+					
 					
 					String sURL = "https://plan-es1.licious.app/_sql?sql="+URLEncoder.encode("select sum(final_forecast) from demand-plan where product_id='"+pr_id+"' and date='"+date+"'and cluster_id='"+c_id+"'"); //just a string
 					
-					String sURL1 = "https://plan-es1.licious.app/_sql?sql="+URLEncoder.encode("select sum(stock_units) from closingstock where product_id='"+pr_id+"' and osdate='"+csDate+"'and cluster_id='"+c_id+"'"); //just a string
+					String sURL1 = "https://plan-es1.licious.app/_sql?sql="+URLEncoder.encode("select sum(stock_units) from closingstock where product_id='"+pr_id+"' and osdate='"+csDate+"'and cluster_id='"+c_id+"'"); 
+					
+					 
+					
 					
 					System.out.println(c_id);
 					System.out.println(pr_id);
@@ -98,7 +125,7 @@ public class MorningDispatch {
 			          request1.connect();
 
 			          // Convert to a JSON object to print data
-			          JsonParser jp = new JsonParser(); //from Json
+			         // JsonParser jp = new JsonParser(); //from Json
 			          JsonElement root = jp.parse(new InputStreamReader((InputStream) request1.getContent())); //Convert the input stream to a json element
 			           JsonElement rootobj = root.getAsJsonObject().get("aggregations").getAsJsonObject().get("SUM(final_forecast)").getAsJsonObject().get("value"); //May be an array, may be an object.
 			         
@@ -106,13 +133,18 @@ public class MorningDispatch {
 				          // Connect to the URL using java's native library
 				          URL url1 = new URL(sURL1);
 				          URLConnection request2 = url1.openConnection();
-				          request1.connect();
+				         // request1.connect();
 
 				          // Convert to a JSON object to print data
 				          JsonParser jp1 = new JsonParser(); //from Json
 				          JsonElement root1 = jp.parse(new InputStreamReader((InputStream) request2.getContent())); //Convert the input stream to a json element
-				           JsonElement rootobj1 = root1.getAsJsonObject().get("aggregations").getAsJsonObject().get("SUM(stock_units)").getAsJsonObject().get("value"); //May be an array, may be an object.    
-			           
+				           JsonElement rootobj1 = root1.getAsJsonObject().get("aggregations").getAsJsonObject().get("SUM(stock_units)").getAsJsonObject().get("value"); //May be an array, may be an object.   
+				           
+				        
+				         //String    sURL1 = URLEncoder.encode(sURL, "UTF-8");
+					          
+					         
+					         
 			           //System.out.println(sURL);
 			           
 			           System.out.println();
@@ -125,8 +157,8 @@ public class MorningDispatch {
 			           System.out.println();
 			           System.out.println("Closing Stock = " + rootobj1 + " " +" for this " + " " + pr_id + " on " + " "+ csDate + " " + " for " + c_id);
 			           System.out.println();
-			           System.out.println("************************* I LOVE YOU *************************");
-			           System.out.println("************************* You Are THE STAR *******************");
+			           System.out.println("********************************************");
+			           System.out.println("********************************************");
 			           
 			           // Parsing the Json element to String
 			           String s11 = rootobj.toString();

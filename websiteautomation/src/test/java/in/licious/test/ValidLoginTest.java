@@ -1,5 +1,7 @@
 package in.licious.test;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 

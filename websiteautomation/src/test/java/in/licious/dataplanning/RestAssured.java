@@ -1,6 +1,10 @@
 package in.licious.dataplanning;
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -10,7 +14,6 @@ import org.testng.annotations.Test;
 
 import groovy.json.JsonParser;
 import io.restassured.response.Response;
-import junit.framework.Assert;
 
 
 
@@ -25,7 +28,7 @@ public void getTest()
     String resbody=response.asString();
     
     System.out.println(resbody);
-    Assert.assertEquals(200, stcode);
+    AssertJUnit.assertEquals(200, stcode);
     
 }
 }

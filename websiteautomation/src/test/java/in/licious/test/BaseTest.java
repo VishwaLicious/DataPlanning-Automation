@@ -1,5 +1,9 @@
 package in.licious.test;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -64,6 +68,8 @@ public abstract class BaseTest implements  AutomationConstant {
 		log.info(passWord);
 		log.info(implicitWait);
 	}
+	//@BeforeMethod
+	//@BeforeMethod
 	@BeforeMethod
 	public void setUp(Method m){
 		etest=ereport.startTest(m.getName());
@@ -83,6 +89,8 @@ public abstract class BaseTest implements  AutomationConstant {
 		//driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
 	}
+	//@AfterMethod
+	//@AfterMethod
 	@AfterMethod
 	public void tearDown(ITestResult result){
 		driver.close();

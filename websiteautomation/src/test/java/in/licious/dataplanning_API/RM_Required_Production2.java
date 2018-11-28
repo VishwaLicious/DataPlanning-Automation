@@ -1,5 +1,9 @@
 package in.licious.dataplanning_API;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -45,7 +49,7 @@ public class RM_Required_Production2 extends ElasticSearch {
 		Response response = request.post("http://planning-api.licious.in/procurement/services/rmproductionplan/generate");
 
 		int statusCode = response.getStatusCode();
-		Assert.assertEquals(statusCode, 200);
+		AssertJUnit.assertEquals(statusCode, 200);
 		String data = response.getContentType();
 		ResponseBody data1 = response.getBody();
 
