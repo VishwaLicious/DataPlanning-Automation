@@ -128,10 +128,12 @@
                   <a name="testChicken">
                   </a> <!-- testChicken -->
                   <span class="method-name">testChicken</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: null
-	at java.lang.Integer.parseInt(Integer.java:542)
-	at java.lang.Integer.parseInt(Integer.java:615)
-	at in.licious.test.BaseTest.initGlobalConstants(BaseTest.java:64)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:130)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:93)
+	at java.io.FileReader.&lt;init&gt;(FileReader.java:58)
+	at in.licious.util.InitProperties.initPropertis(InitProperties.java:17)
+	at in.licious.test.BaseTest.initFramework(BaseTest.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -140,11 +142,7 @@
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:626)
-	at org.testng.TestRunner.run(TestRunner.java:594)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:326)
 	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
@@ -164,7 +162,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/wy/zy0yyxw57mn5s40r_cj7_fz40000gp/T/testng-eclipse-1656932025/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/wy/zy0yyxw57mn5s40r_cj7_fz40000gp/T/testng-eclipse-749265565/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -250,15 +248,11 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">in.licious.test.Chicken</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">initFramework</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">initGlobalConstants</span>
-                <span class="method-start">258 ms</span>
-              </div> <!-- configuration-test before -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

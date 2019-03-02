@@ -12,7 +12,10 @@ public class InitProperties {
 		
 		try {
 			for(String fileName:propertiesFileNamesWithoutExtension){			
-			property.load(new FileReader(System.getProperty("user.dir")+"\\config\\"+fileName+".properties"));
+		//	property.load(new FileReader(System.getProperty("user.dir")+"\\config\\"+fileName+".properties"));
+				
+				property.load(new FileReader(System.getProperty("Users/Vishwa/git/websiteautomation/config/config.properties")));
+				
 			
 			}
 
